@@ -10,6 +10,12 @@ export default {
       screens: {
         xsm: "320px",
       },
+      width: {
+        100: "500px",
+      },
+      height: {
+        100: "500px",
+      },
     },
   },
   plugins: [],

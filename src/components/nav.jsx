@@ -8,7 +8,7 @@ function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center p-5 text-xl font-medium border-b-2 border-blue-200 bg-primary text-secondary">
+    <nav className="fixed w-full z-50 flex justify-between items-center p-7 text-xl font-medium border-b border-blue-200 bg-primary text-secondary">
       <div className="logo hover:text-blue-200 cursor-pointer transition ease duration-300">
         <a href="#">
           <FontAwesomeIcon icon={faTerminal} />
@@ -52,7 +52,7 @@ function Nav() {
         </ul>
       </div>
       {isOpen && (
-        <div className="md:hidden absolute top-16 right-0 bg-primary text-secondary p-2">
+        <div className="md:hidden absolute top-16 right-0 bg-primary text-secondary p-2 rounded-md">
           <ul className="flex flex-col gap-2">
             <li>
               <a
