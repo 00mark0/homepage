@@ -14,7 +14,7 @@ function About() {
         />
       </div>
       <div className="text w-3/5 mt-12 text-center md:text-start md:w-2/5 ">
-        <h1 className="text-4xl font-bold mb-5 md:text-6xl md:font-bold">
+        <h1 className="text-5xl font-bold mb-5 md:text-6xl md:font-bold">
           Welcome
         </h1>
         <p className="text-lg md:text-xl">

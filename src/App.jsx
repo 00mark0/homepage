@@ -5,6 +5,7 @@ import Nav from "./components/nav";
 import About from "./components/about";
 import Skills from "./components/skills";
 import Projects from "./components/projects";
+import Contact from "./components/contact";
 
 function App() {
   const [darkMode, setDarkMode] = useState(
@@ -27,7 +28,9 @@ function App() {
           <Skills />
           <Projects />
         </main>
-        <footer></footer>
+        <footer>
+          <Contact />
+        </footer>
       </DarkModeContext.Provider>
     </>
   );

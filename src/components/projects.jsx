@@ -26,7 +26,7 @@ function Projects() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-10 md:p-24 lg:p-32 place-items-center ">
         {switchPage.map((project) => (
           <div
-            className="card p-6 w-80 flex flex-col items-center transition ease duration-300 hover:scale-105"
+            className="card p-6 w-80 flex flex-col items-center shadow-lg shadow-slate-700 transition ease duration-300 hover:scale-105"
             key={project.name}
           >
             <a href={project.siteLink} target="_blank">
