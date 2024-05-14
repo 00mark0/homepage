@@ -1,11 +1,31 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import DarkModeToggle from "./darkMode";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTerminal } from "@fortawesome/free-solid-svg-icons";
 import { FaBars } from "react-icons/fa";
-import DarkModeToggle from "./darkMode";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const navRef = useRef();
+  const buttonRef = useRef();
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        navRef.current &&
+        !navRef.current.contains(e.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(e.target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav className="fixed w-full z-50 flex justify-between items-center p-7 text-xl font-medium border-b border-blue-200 bg-primary text-secondary">
@@ -18,7 +38,8 @@ function Nav() {
       <div className="navLinks">
         <button
           type="button"
-          className=" md:hidden sm:block"
+          className="md:hidden sm:block hover:text-blue-200 transition ease duration-300 rounded-full"
+          ref={buttonRef}
           onClick={() => setIsOpen(!isOpen)}
         >
           <FaBars />
@@ -52,7 +73,10 @@ function Nav() {
         </ul>
       </div>
       {isOpen && (
-        <div className="md:hidden absolute top-16 right-0 bg-primary text-secondary p-2 rounded-md">
+        <div
+          ref={navRef}
+          className="md:hidden absolute top-16 right-0 bg-primary text-secondary p-2 rounded-md"
+        >
           <ul className="flex flex-col gap-2">
             <li>
               <a
@@ -71,7 +95,12 @@ function Nav() {
               </a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a
+                href="#contact"
+                className="hover:text-blue-200 transition ease duration-300"
+              >
+                Contact
+              </a>
             </li>
             <DarkModeToggle />
           </ul>

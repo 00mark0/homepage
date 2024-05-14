@@ -1,18 +1,30 @@
+import { useState, useContext } from "react";
+import { DarkModeContext } from "./darkMode";
 import weatherApp from "../assets/weatherApp.png";
 import battleship from "../assets/battleship.png";
 import restaurantPage from "../assets/restaurantPage.png";
 import pokemonSearchApp from "../assets/pokemonSearchApp.png";
 import calculator from "../assets/calculator.png";
+import library from "../assets/library.png";
+import todoApp from "../assets/todoApp.png";
+import ticTacToe from "../assets/ticTacToe.png";
+import cashRegister from "../assets/cashRegister.png";
+import pomodoro from "../assets/pomodoro.png";
 import github from "../assets/github.png";
 import site from "../assets/site.png";
-import { forAnotherFile } from "./darkMode.jsx";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 
 function Projects() {
+  const { darkMode } = useContext(DarkModeContext);
+  const [switchPage, setSwitchPage] = useState(projectsPage1);
+  const [selectedPage, setSelectedPage] = useState(1);
+
   return (
     <section id="projects" className="pt-28 md:pt-56">
       <h3 className="text-center text-5xl font-bold">My Work</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-10 md:p-24 lg:p-32 place-items-center ">
-        {projectsPage1.map((project) => (
+        {switchPage.map((project) => (
           <div
             className="card p-6 w-80 flex flex-col items-center transition ease duration-300 hover:scale-105"
             key={project.name}
@@ -24,19 +36,22 @@ function Projects() {
                 className="w-80 h-48 rounded-md"
               />
             </a>
-            <h4 className="text-xl font-semibold mb-5 mt-5">{project.name}</h4>
-            <p className="text-lg mb-5">{project.description}</p>
-            <div className="links flex gap-3">
+            <h4 className="text-xl font-semibold mb-5 mt-5 text-center">
+              {project.name}
+            </h4>
+            <p className="text-lg mb-5 text-center">{project.description}</p>
+            <div className="flex gap-3">
               <a
                 href={project.repoLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <img
+                  id="links"
                   src={github}
                   alt="GitHub"
                   className={`rounded-full w-10 h-10 p-1 transition ease duration-300 hover:scale-125 ${
-                    forAnotherFile ? "bg-secondary" : ""
+                    darkMode ? "bg-white" : ""
                   }`}
                 />
               </a>
@@ -46,16 +61,43 @@ function Projects() {
                 rel="noopener noreferrer"
               >
                 <img
+                  id="links"
                   src={site}
                   alt="Site"
                   className={`rounded-full w-10 h-10 p-1 transition ease duration-300 hover:scale-125 ${
-                    forAnotherFile ? "bg-secondary" : ""
+                    darkMode ? "bg-white" : ""
                   }`}
                 />
               </a>
             </div>
           </div>
         ))}
+      </div>
+      <div className="flex justify-center gap-3 md:-mt-24">
+        <button
+          id="pages"
+          onClick={() => {
+            setSwitchPage(projectsPage1);
+            setSelectedPage(1);
+          }}
+          className={`transition ease duration-300 hover:scale-110 ${
+            selectedPage === 1 ? "text-blue-900" : ""
+          } ${darkMode ? "" : "text-blue-300"}`}
+        >
+          <FontAwesomeIcon icon={faCircle} />
+        </button>
+        <button
+          id="pages"
+          onClick={() => {
+            setSwitchPage(projectsPage2);
+            setSelectedPage(2);
+          }}
+          className={`transition ease duration-300 hover:scale-110 ${
+            selectedPage === 2 ? "text-blue-900" : ""
+          } ${darkMode ? "" : "text-blue-300"}`}
+        >
+          <FontAwesomeIcon icon={faCircle} />
+        </button>
       </div>
     </section>
   );
@@ -103,5 +145,46 @@ const projectsPage1 = [
       "Figured I'd also throw in a calculator project for good measure.",
     repoLink: "https://github.com/00mark0/odin-project---calculator.git",
     siteLink: "https://00mark0.github.io/odin-project---calculator/",
+  },
+  {
+    screenshot: library,
+    name: "Library",
+    description:
+      "Add books to the library, keep track of the Read status and search for books",
+    repoLink: "https://github.com/00mark0/odin-project---library.git",
+    siteLink: "https://00mark0.github.io/odin-project---library/",
+  },
+];
+
+const projectsPage2 = [
+  {
+    screenshot: pomodoro,
+    name: "Pomodoro Timer",
+    description:
+      "Pomodoro timer. Set the time for work and break. Get to work!",
+    repoLink: "https://github.com/00mark0/pomodoro-app.git",
+    siteLink: "https://00mark0.github.io/pomodoro-app/",
+  },
+  {
+    screenshot: todoApp,
+    name: "To Do App",
+    description: "Got to have a To Do App, right? Can't go without it.",
+    repoLink: "https://github.com/00mark0/odin-project---todo-app.git",
+    siteLink: "https://00mark0.github.io/odin-project---todo-app/",
+  },
+  {
+    screenshot: ticTacToe,
+    name: "Tic Tac Toe",
+    description: "Tic Tac Toe game. So many possibilities in this one.",
+    repoLink: "https://github.com/00mark0/odin-project---tic-tac-toe.git",
+    siteLink: "https://00mark0.github.io/odin-project---tic-tac-toe/",
+  },
+  {
+    screenshot: cashRegister,
+    name: "Cash Register",
+    description:
+      "Keep track of how much change to return, and how much money is in the register. This was a fun one.",
+    repoLink: "https://github.com/00mark0/fCC-project---cash-register.git",
+    siteLink: "https://00mark0.github.io/fCC-project---cash-register/",
   },
 ];

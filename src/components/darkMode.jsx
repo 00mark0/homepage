@@ -1,13 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useContext, createContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
-export let forAnotherFile = true;
+export const DarkModeContext = createContext();
 
 function DarkModeToggle() {
-  const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("darkMode") === "true"
-  );
+  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
 
   useEffect(() => {
     if (darkMode) {
@@ -18,12 +16,6 @@ function DarkModeToggle() {
       document.body.style.color = "#111827";
     }
   }, [darkMode]);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    localStorage.setItem("darkMode", !darkMode);
-    forAnotherFile = !forAnotherFile;
-  };
 
   return (
     <li id="darkMode" onClick={toggleDarkMode}>
