@@ -75,7 +75,7 @@ function Projects() {
       </div>
       <div className="flex justify-center gap-3 md:-mt-24">
         <button
-          id="pages"
+          id="page1"
           onClick={() => {
             setSwitchPage(projectsPage1);
             setSelectedPage(1);
@@ -87,7 +87,7 @@ function Projects() {
           <FontAwesomeIcon icon={faCircle} />
         </button>
         <button
-          id="pages"
+          id="page2"
           onClick={() => {
             setSwitchPage(projectsPage2);
             setSelectedPage(2);
