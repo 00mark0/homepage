@@ -9,7 +9,7 @@ import library from "../assets/library.png";
 import todoApp from "../assets/todoApp.png";
 import ticTacToe from "../assets/ticTacToe.png";
 import cashRegister from "../assets/cashRegister.png";
-import pomodoro from "../assets/pomodoro.png";
+import pomodoro from "../assets/pomodoro2.0.png";
 import github from "../assets/github.png";
 import site from "../assets/site.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -162,8 +162,8 @@ const projectsPage2 = [
     name: "Pomodoro Timer",
     description:
       "Pomodoro timer. Set the time for work and break. Get to work!",
-    repoLink: "https://github.com/00mark0/pomodoro-app.git",
-    siteLink: "https://00mark0.github.io/pomodoro-app/",
+    repoLink: "https://github.com/00mark0/pomodoro2.0.git",
+    siteLink: "https://00mark0.github.io/pomodoro2.0/",
   },
   {
     screenshot: todoApp,
