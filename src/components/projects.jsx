@@ -24,10 +24,10 @@ function Projects() {
   return (
     <section id="projects" className="pt-28 md:pt-56">
       <h3 className="text-center text-5xl font-bold">My Work</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-10 md:p-24 lg:p-32 place-items-center ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 sm:gap-x-96 md:gap-x-96 lg:gap-x-32 gap-y-16 p-10 md:p-24 lg:p-32 place-items-center">
         {switchPage.map((project) => (
           <div
-            className="card p-6 w-80 flex flex-col items-center shadow-lg shadow-slate-700 transition ease duration-300 hover:scale-105"
+            className="p-6 w-80 min-h-full flex flex-col items-center shadow-lg shadow-slate-700 transition ease duration-300 hover:scale-105"
             key={project.name}
           >
             <a href={project.siteLink} target="_blank">
@@ -74,7 +74,7 @@ function Projects() {
           </div>
         ))}
       </div>
-      <div className="flex justify-center gap-3 md:-mt-24">
+      <div className="flex justify-center gap-3">
         <button
           id="page1"
           onClick={() => {
