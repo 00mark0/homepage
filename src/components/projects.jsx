@@ -10,6 +10,7 @@ import todoApp from "../assets/todoApp.png";
 import ticTacToe from "../assets/ticTacToe.png";
 import cashRegister from "../assets/cashRegister.png";
 import pomodoro from "../assets/pomodoro2.0.png";
+import mdPreviewer from "../assets/mdPreviewer.png";
 import github from "../assets/github.png";
 import site from "../assets/site.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -186,5 +187,13 @@ const projectsPage2 = [
       "Keep track of how much change to return, and how much money is in the register. This was a fun one.",
     repoLink: "https://github.com/00mark0/fCC-project---cash-register.git",
     siteLink: "https://00mark0.github.io/fCC-project---cash-register/",
+  },
+  {
+    screenshot: mdPreviewer,
+    name: "Markdown Previewer",
+    description:
+      "Markdown Previewer. Write markdown and see it rendered. Practice your READMEs. (unlike me)",
+    repoLink: "https://github.com/00mark0/fCC-project---markdown-previewer.git",
+    siteLink: "https://00mark0.github.io/fCC-project---markdown-previewer/",
   },
 ];
