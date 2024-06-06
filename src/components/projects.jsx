@@ -5,7 +5,6 @@ import battleship from "../assets/battleship.png";
 import restaurantPage from "../assets/restaurantPage.png";
 import pokemonSearchApp from "../assets/pokemonSearchApp.png";
 import calculator from "../assets/calculator.png";
-import library from "../assets/library.png";
 import todoApp from "../assets/todoApp.png";
 import ticTacToe from "../assets/ticTacToe.png";
 import cashRegister from "../assets/cashRegister.png";
@@ -204,13 +203,5 @@ const projectsPage2 = [
       "Figured I'd also throw in a calculator project for good measure.",
     repoLink: "https://github.com/00mark0/odin-project---calculator.git",
     siteLink: "https://00mark0.github.io/odin-project---calculator/",
-  },
-  {
-    screenshot: library,
-    name: "Library",
-    description:
-      "Add books to the library, keep track of the Read status and search for books",
-    repoLink: "https://github.com/00mark0/odin-project---library.git",
-    siteLink: "https://00mark0.github.io/odin-project---library/",
   },
 ];
