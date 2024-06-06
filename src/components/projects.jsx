@@ -11,6 +11,8 @@ import ticTacToe from "../assets/ticTacToe.png";
 import cashRegister from "../assets/cashRegister.png";
 import pomodoro from "../assets/pomodoro2.0.png";
 import mdPreviewer from "../assets/mdPreviewer.png";
+import cvBuilder from "../assets/cvBuilder.png";
+import memoryCardGame from "../assets/memoryCardGame.png";
 import github from "../assets/github.png";
 import site from "../assets/site.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -140,20 +142,19 @@ const projectsPage1 = [
     siteLink: "https://00mark0.github.io/fCC-project---pokemon-search-app/",
   },
   {
-    screenshot: calculator,
-    name: "Calculator",
+    screenshot: cvBuilder,
+    name: "CV Builder",
     description:
-      "Figured I'd also throw in a calculator project for good measure.",
-    repoLink: "https://github.com/00mark0/odin-project---calculator.git",
-    siteLink: "https://00mark0.github.io/odin-project---calculator/",
+      "Fully customizable CV builder. Omit or add sections as you like. Download your CV as a PDF.",
+    repoLink: "https://github.com/00mark0/odin-project---cv-app.git",
+    siteLink: "https://odinprojectcvapp.netlify.app/",
   },
   {
-    screenshot: library,
-    name: "Library",
-    description:
-      "Add books to the library, keep track of the Read status and search for books",
-    repoLink: "https://github.com/00mark0/odin-project---library.git",
-    siteLink: "https://00mark0.github.io/odin-project---library/",
+    screenshot: memoryCardGame,
+    name: "Pokemon Memory Game",
+    description: "Memory card game with Pokemon. Gotta catch 'em all!",
+    repoLink: "https://github.com/00mark0/odin-project---memory-card.git",
+    siteLink: "https://odinproject-memorycard.netlify.app/",
   },
 ];
 
@@ -195,5 +196,21 @@ const projectsPage2 = [
       "Markdown Previewer. Write markdown and see it rendered. Practice your READMEs. (unlike me)",
     repoLink: "https://github.com/00mark0/fCC-project---markdown-previewer.git",
     siteLink: "https://00mark0.github.io/fCC-project---markdown-previewer/",
+  },
+  {
+    screenshot: calculator,
+    name: "Calculator",
+    description:
+      "Figured I'd also throw in a calculator project for good measure.",
+    repoLink: "https://github.com/00mark0/odin-project---calculator.git",
+    siteLink: "https://00mark0.github.io/odin-project---calculator/",
+  },
+  {
+    screenshot: library,
+    name: "Library",
+    description:
+      "Add books to the library, keep track of the Read status and search for books",
+    repoLink: "https://github.com/00mark0/odin-project---library.git",
+    siteLink: "https://00mark0.github.io/odin-project---library/",
   },
 ];
