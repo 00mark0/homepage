@@ -41,7 +41,9 @@ function Projects() {
             <h4 className="text-xl font-semibold mb-5 mt-5 text-center">
               {project.name}
             </h4>
-            <p className="text-lg mb-5 text-center">{project.description}</p>
+            <p className="text-lg mb-5 text-center min-h-72">
+              {project.description}
+            </p>
             <div className="flex gap-3">
               <a
                 href={project.repoLink}
