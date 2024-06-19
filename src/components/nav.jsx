@@ -82,6 +82,7 @@ function Nav() {
               <a
                 href="#about"
                 className="hover:text-blue-200 transition ease duration-300"
+                onClick={() => setIsOpen(false)}
               >
                 About
               </a>
@@ -90,6 +91,7 @@ function Nav() {
               <a
                 href="#projects"
                 className="hover:text-blue-200 transition ease duration-300"
+                onClick={() => setIsOpen(false)}
               >
                 Projects
               </a>
@@ -98,6 +100,7 @@ function Nav() {
               <a
                 href="#contact"
                 className="hover:text-blue-200 transition ease duration-300"
+                onClick={() => setIsOpen(false)}
               >
                 Contact
               </a>
