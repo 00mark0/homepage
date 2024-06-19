@@ -7,7 +7,7 @@ import pokemonSearchApp from "../assets/pokemonSearchApp.png";
 import calculator from "../assets/calculator.png";
 import todoApp from "../assets/todoApp.png";
 import ticTacToe from "../assets/ticTacToe.png";
-import cashRegister from "../assets/cashRegister.png";
+import electra from "../assets/electra.png";
 import pomodoro from "../assets/pomodoro2.0.png";
 import mdPreviewer from "../assets/mdPreviewer.png";
 import cvBuilder from "../assets/cvBuilder.png";
@@ -109,6 +109,14 @@ export default Projects;
 
 const projectsPage1 = [
   {
+    screenshot: electra,
+    name: "Electra",
+    description:
+      "Welcome to Electra, an e-commerce site built with React and Tailwind CSS. This site offers a seamless shopping experience with a fully functional cart and search functionality, among other exciting features.",
+    repoLink: "https://github.com/00mark0/ecommerce-site.git",
+    siteLink: "https://electra-ecommerce.netlify.app/",
+  },
+  {
     screenshot: weatherApp,
     name: "Weather App",
     description:
@@ -132,14 +140,7 @@ const projectsPage1 = [
     repoLink: "https://github.com/00mark0/odin-project---restaurant-page.git",
     siteLink: "https://00mark0.github.io/odin-project---restaurant-page/",
   },
-  {
-    screenshot: pokemonSearchApp,
-    name: "Pokemon Search App",
-    description:
-      "Search for your favorite pokemon and see their stats. The best feature is the added sound for KOFFING. The best pokemon sound ever.",
-    repoLink: "https://github.com/00mark0/fCC-project---pokemon-search-app.git",
-    siteLink: "https://00mark0.github.io/fCC-project---pokemon-search-app/",
-  },
+
   {
     screenshot: cvBuilder,
     name: "CV Builder",
@@ -181,12 +182,12 @@ const projectsPage2 = [
     siteLink: "https://00mark0.github.io/odin-project---tic-tac-toe/",
   },
   {
-    screenshot: cashRegister,
-    name: "Cash Register",
+    screenshot: pokemonSearchApp,
+    name: "Pokemon Search App",
     description:
-      "Keep track of how much change to return, and how much money is in the register. This was a fun one.",
-    repoLink: "https://github.com/00mark0/fCC-project---cash-register.git",
-    siteLink: "https://00mark0.github.io/fCC-project---cash-register/",
+      "Search for your favorite pokemon and see their stats. The best feature is the added sound for KOFFING. The best pokemon sound ever.",
+    repoLink: "https://github.com/00mark0/fCC-project---pokemon-search-app.git",
+    siteLink: "https://00mark0.github.io/fCC-project---pokemon-search-app/",
   },
   {
     screenshot: mdPreviewer,
